@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Enter Code</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        font-family: monospace;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      input, button {
+        font-size: 1.2em;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Enter Access Code</h1>
+    <input id="codeInput" placeholder="Enter Code..." />
+    <button onclick="checkCode()">Submit</button>
+    <p id="message"></p>
+    <script>
+      function checkCode() {
+        const code = document.getElementById("codeInput").value;
+        if (code === "SUPER_SOLDIER") {
+          window.location.href = "https://docs.google.com/presentation/d/1K3bEkYMyM7K39wxihNJ1w8IuaPob19D7aGmpfDj8jLE/edit?slide=id.p#slide=id.p";
+        } else {
+          document.getElementById("message").innerText = "Incorrect code. Try again.";
+        }
+      }
+    </script>
+  </body>
+</html>
+
