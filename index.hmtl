@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Slide Unlock</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Enter the access code</h2>
+  <input type="text" id="accessCode" placeholder="Type here...">
+  <button onclick="checkCode()">Submit</button>
+
+  <script>
+    function checkCode() {
+      const input = document.getElementById("accessCode").value.trim();
+      const correctCode = "SUPER_SOILDER"; // CHANGE THIS TO YOUR CODE
+      const slideURL = "https://docs.google.com/presentation/d/1K3bEkYMyM7K39wxihNJ1w8IuaPob19D7aGmpfDj8jLE/edit?slide=id.p#slide=id.p"; // REPLACE WITH YOUR LINK
+
+      if (input === correctCode) {
+        window.location.href = slideURL;
+      } else {
+        alert("Incorrect code. Try again.");
+      }
+    }
+  </script>
+</body>
+</html>
